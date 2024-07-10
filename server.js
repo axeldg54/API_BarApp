@@ -21,8 +21,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //     console.log(`Server is running on port ${PORT}.`);
 // });
 
-app.use(() => {
-    console.log('Server is running on port ${PORT}.');
-})
+app.get('/', (req, res) => {
+    res.send('Hello from Vercel!');
+});
 
 module.exports = app;
